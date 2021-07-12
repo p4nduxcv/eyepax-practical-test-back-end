@@ -8,4 +8,4 @@ const slide = new Schema({
   subTitle: String,
 });
 
-module.exports = mongoose.model("user", slide, "user");
+module.exports = mongoose.model("slide", slide, "slide");

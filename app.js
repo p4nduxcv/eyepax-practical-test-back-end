@@ -10,6 +10,8 @@ const api = require("./routes/api");
 
 app.use(express.json());
 
+app.use("", api);
+
 app.listen(port, () => {
   console.log("Server is up on port " + port);
 });
