@@ -25,4 +25,20 @@ mongoose.connect(
   }
 );
 
+/**
+ * @optional this POST method has been created for enter 10 slides quickly using POSTMAN
+ */
+
+router.post("/slide", (req, res) => {
+  let slide = new Slide(req.body);
+  slide
+    .save()
+    .then(() => {
+      res.status(200).send(slide);
+    })
+    .catch((e) => {
+      res.status(400).send(e);
+    });
+});
+
 module.exports = router;
